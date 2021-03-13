@@ -53,7 +53,7 @@ Example Playbook
         msg: |
           -----------------------------------------------
 
-          TEST #2 (full here-doc style with variable manipulation):
+          TEST #3 (full here-doc style with variable manipulation):
 
           {% set fruit_inventory = {"apples": 3, "oranges": 6} %}
           {% set fruit_list = ["apples", "oranges"] %}
@@ -78,7 +78,7 @@ Example Playbook
     - debug:
         msg: |
           -----------------------------------------------
-          TEST #3 (inline python as a function with a return):
+          TEST #4 (inline python as a function with a return):
           {% set output = """          
           some_dict={'a': 1, 'b': val1}
           __return_var('some_dict')          
