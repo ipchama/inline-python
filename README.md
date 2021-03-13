@@ -20,7 +20,7 @@ None
 
 Example Playbook
 ----------------
-
+```
   ---
   - hosts: localhost
     remote_user: root
@@ -73,6 +73,7 @@ Example Playbook
           {{ fruit_list }}
 
           {{ fruit_inventory }}
+```
 
 License
 -------
