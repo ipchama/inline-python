@@ -7,6 +7,7 @@ Requirements
 ------------
 
 Python3
+
 Jinja2 >= 2.10 (for full functionality displayed in the examples, but should work with slightly older versions as welll)
 
 Role Variables
