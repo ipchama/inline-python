@@ -1,12 +1,13 @@
 inline_python
 =========
 
-This role provides the inline_python filter which allows you to "embed" python directly into your Ansible jinja templates.
+This role provides the `inline_python` and `inline_python_func` filters which allow you to "embed" python directly into your Ansible jinja templates.  `inline_python_func` allows you to "return" vars with `__return_var(<var name>)`, while `inline_python` has patched `print()` to return everything "printed."
 
 Requirements
 ------------
 
-Jinja2 >= 2.10 (for full functionality displayed in the examples)
+Python3
+Jinja2 >= 2.10 (for full functionality displayed in the examples, but should work with slightly older versions as welll)
 
 Role Variables
 --------------
