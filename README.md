@@ -28,6 +28,7 @@ Example Playbook
       - inline_python
 
   tasks:
+  
     - debug:
         msg: |
           -----------------------------------------------
@@ -73,6 +74,17 @@ Example Playbook
           {{ fruit_list }}
 
           {{ fruit_inventory }}
+
+    - debug:
+        msg: |
+          -----------------------------------------------
+          TEST #3 (inline python as a function with a return):
+          {% set output = """          
+          some_dict={'a': 1, 'b': val1}
+          __return_var('some_dict')          
+          """ | inline_python_func(val1="Some output") %}
+          {{ output }}
+
 ```
 
 License
