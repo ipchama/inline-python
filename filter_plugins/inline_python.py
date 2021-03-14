@@ -42,7 +42,12 @@ def __return_var(var_name):
     exec(expression, globalz, kwargs)
 
     if '__inline_python_RETURN_VAR__' in globalz:
-        return kwargs[globalz['__inline_python_RETURN_VAR__']]
+        if globalz['__inline_python_RETURN_VAR__'] in kwargs:
+            return kwargs[globalz['__inline_python_RETURN_VAR__']]
+        elif  globalz['__inline_python_RETURN_VAR__'] in globalz:
+            return globalz[globalz['__inline_python_RETURN_VAR__']]
+        else:
+            raise NameError("'%s' used in __return_var is not defined in inline python code." % globalz['__inline_python_RETURN_VAR__'] )
 
 
 
