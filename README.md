@@ -6,7 +6,9 @@ This role provides the `inline_python` and `inline_python_func` filters which al
 Galaxy Install
 ------------
 
+```
 ansible-galaxy install git+https://github.com/ipchama/inline_python.git
+```
 
 Requirements
 ------------
